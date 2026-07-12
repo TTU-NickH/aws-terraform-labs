@@ -120,6 +120,42 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 - Parameterized the EC2 instance name and GitHub repository URL
 - Improved project organization using multiple Terraform files
 
+### Lab 7 - Custom VPC and Networking
+
+**Objective:** Build a custom AWS network and deploy an EC2 instance without relying on AWS's default VPC.
+
+**AWS Resources**
+- VPC
+- Public Subnet
+- Internet Gateway
+- Route Table
+- Route Table Association
+- Security Group
+- EC2 Instance
+
+**Concepts Learned**
+- Custom AWS networking
+- CIDR blocks
+- Public subnets
+- Internet Gateways
+- Route Tables
+- Route Table Associations
+- Terraform resource dependencies
+
+**Completed Tasks**
+- Created a custom VPC
+- Configured a public subnet
+- Attached an Internet Gateway
+- Created and associated a Route Table
+- Created a Security Group allowing SSH and HTTP traffic
+- Deployed an EC2 instance inside the custom VPC
+- Automatically configured Apache using EC2 User Data
+- Verified Internet connectivity through the custom network
+
+**Why This Matters**
+
+Most production AWS environments do not use the default VPC. Understanding how to build a custom VPC, configure routing, and deploy resources inside your own network is a foundational cloud engineering skill and a common topic in AWS and DevOps interviews.
+
 ## Skills Practiced
 
 ### AWS
@@ -142,6 +178,9 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 - User Data
 - State Management
 - Infrastructure as Code
+- Resource Dependencies
+- Infrastructure Provisioning
+- Custom Network Deployment
 
 ### Linux
 - SSH
@@ -161,3 +200,10 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 - GitHub repository cloning
 - Static website hosting
 - EC2 web server provisioning
+
+### AWS Networking
+- Virtual Pirvate Cloud
+- Public Subnets
+- Internet Gateways
+- Route Table Association
+- CIDR Block Planning
