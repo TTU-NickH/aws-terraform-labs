@@ -4,7 +4,7 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 
 ---
 
-## Labs Completed
+### Labs Completed
 
 ### Lab 1 - Terraform Basics
 **Objective:** Learn the core Terraform workflow and syntax.
@@ -46,31 +46,60 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 - Terraform State Management
 
 **Completed Tasks**
-- Automatically retrieved the latest Amazon Linux 2023 AMI
+- Retrieved the latest Amazon Linux 2023 AMI using a Terraform data source
 - Created a Security Group allowing SSH access
 - Provisioned an EC2 instance
-- Connected to the instance via SSH using an existing AWS Key Pair
-- Installed Apache Web Server for future deployment labs
+- Connected to the instance via SSH using an AWS Key Pair
+- Installed Apache Web Server manually
 
 ---
 
-## Website Deployment Practice
+### Lab 4 - Automating EC2 with User Data
+**Objective:** Automate server configuration using EC2 User Data.
 
-I used my existing Weather App project to practice deploying applications using multiple AWS services.
+**AWS Resources**
+- EC2 Instance
+- Security Group
 
-### EC2 Deployment
-- Deployed the Weather App to an Amazon EC2 instance
-- Configured Apache (`httpd`) to serve the application
-- Connected and managed the server using SSH
+**Concepts Learned**
+- EC2 User Data
+- Cloud-Init
+- Infrastructure automation
+- Resource replacement
+- Automated software installation
 
-### S3 Deployment
-- Uploaded the Weather App to an Amazon S3 bucket
-- Practiced static website hosting concepts
-
-**Weather App Repository:**  
-https://github.com/TTU-NickH/weather-app
+**Completed Tasks**
+- Provisioned an EC2 instance
+- Automatically updated Amazon Linux
+- Installed Apache without manually connecting to the server
+- Enabled and started Apache automatically
+- Created a webpage during the EC2 boot process
+- Troubleshot Cloud-Init logs and corrected User Data execution
 
 ---
+
+### Lab 5 - Automated Weather App Deployment
+**Objective:** Automatically deploy my Weather App from GitHub to an EC2 instance using Terraform.
+
+**AWS Resources**
+- EC2 Instance
+- Security Group
+
+**Concepts Learned**
+- Automated application deployment
+- Git installation through User Data
+- GitHub repository cloning
+- Linux file management
+- Apache web hosting
+- End-to-end infrastructure automation
+
+**Completed Tasks**
+- Provisioned an EC2 instance with Terraform
+- Installed Apache and Git automatically using User Data
+- Cloned my public Weather App repository from GitHub
+- Copied application files into Apache's document root
+- Configured file ownership and permissions
+- Successfully served the Weather App through Apache without manual 
 
 ## Skills Practiced
 
@@ -79,22 +108,32 @@ https://github.com/TTU-NickH/weather-app
 - EC2
 - Amazon S3
 - Security Groups
+- Amazon Linux 2023
 
 ### Terraform
 - Providers
 - Resources
 - Data Sources
 - Outputs
+- User Data
 - State Management
 - Infrastructure as Code
 
 ### Linux
 - SSH
-- Apache/httpd
-- Linux Command Line
+- Apache (httpd)
+- Cloud-Init
+- Linux file permissions
+- Linux package management (`dnf`)
 
 ### Development Tools
 - AWS CLI
 - Git
 - GitHub
 - VS Code
+
+### Deployment
+- Automated application deployment
+- GitHub repository cloning
+- Static website hosting
+- EC2 web server provisioning
