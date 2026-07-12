@@ -21,7 +21,7 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
-resource "aws_security_group" "web_sg" {
+resource "aws_security_group" "web_sg" { 
   name        = "terraform-lab4-web-sg"
   description = "Allow SSH and HTTP"
 
