@@ -101,6 +101,25 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 - Configured file ownership and permissions
 - Successfully served the Weather App through Apache without manual 
 
+### Lab 6 - Variables and Project Organization
+
+**Objective:** Refactor a Terraform project to make it reusable by replacing hardcoded values with variables and organizing the configuration into multiple files.
+
+**Concepts Learned**
+- Input Variables
+- `terraform.tfvars`
+- Outputs
+- String interpolation
+- Project organization
+- Reusable infrastructure
+
+**Completed Tasks**
+- Moved configuration values into variables
+- Created a `terraform.tfvars` file for deployment values
+- Moved outputs into a dedicated `outputs.tf`
+- Parameterized the EC2 instance name and GitHub repository URL
+- Improved project organization using multiple Terraform files
+
 ## Skills Practiced
 
 ### AWS
@@ -111,6 +130,11 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 - Amazon Linux 2023
 
 ### Terraform
+- Input Variables
+- terraform.tfvars
+- Outputs
+- String interpolation
+- Multi-file project organization
 - Providers
 - Resources
 - Data Sources
