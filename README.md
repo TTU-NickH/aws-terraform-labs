@@ -156,6 +156,33 @@ This repository documents my hands-on AWS and Terraform labs as I build practica
 
 Most production AWS environments do not use the default VPC. Understanding how to build a custom VPC, configure routing, and deploy resources inside your own network is a foundational cloud engineering skill and a common topic in AWS and DevOps interviews.
 
+### Lab 8 - Remote Terraform State
+
+**Objective:** Configure Terraform to store its state remotely using an Amazon S3 backend.
+
+**AWS Resources**
+- Amazon S3 Backend Bucket
+- Amazon S3 Bucket (Managed by Terraform)
+
+**Concepts Learned**
+- Terraform State
+- Remote Backends
+- State Management
+- S3 Backend Configuration
+- Infrastructure Collaboration
+
+**Completed Tasks**
+- Created a dedicated S3 bucket for Terraform remote state
+- Configured Terraform to use an S3 backend
+- Migrated Terraform state from local storage to Amazon S3
+- Enabled bucket encryption and versioning
+- Verified the remote state file in Amazon S3
+- Created a Terraform-managed S3 bucket while using remote state
+
+**Why This Matters**
+
+Terraform relies on its state file to understand the infrastructure it manages. Storing state remotely in Amazon S3 provides a centralized source of truth that enables collaboration, improves reliability, and supports team-based infrastructure management without relying on a single developer's machine.
+
 ## Skills Practiced
 
 ### AWS
@@ -164,6 +191,9 @@ Most production AWS environments do not use the default VPC. Understanding how t
 - Amazon S3
 - Security Groups
 - Amazon Linux 2023
+- Amazon S3 Versioning
+- S3 Encryption
+- Remote Backend Configuration
 
 ### Terraform
 - Input Variables
@@ -181,6 +211,10 @@ Most production AWS environments do not use the default VPC. Understanding how t
 - Resource Dependencies
 - Infrastructure Provisioning
 - Custom Network Deployment
+- Remote State
+- S3 Backends
+- State Management
+- Infrastructure Collaboration
 
 ### Linux
 - SSH
