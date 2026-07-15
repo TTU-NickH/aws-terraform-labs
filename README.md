@@ -183,6 +183,34 @@ Most production AWS environments do not use the default VPC. Understanding how t
 
 Terraform relies on its state file to understand the infrastructure it manages. Storing state remotely in Amazon S3 provides a centralized source of truth that enables collaboration, improves reliability, and supports team-based infrastructure management without relying on a single developer's machine.
 
+### Lab 9 - Reusable Terraform Modules
+
+**Objective:** Create a reusable Terraform module for provisioning an EC2 web server and its security group.
+
+**AWS Resources**
+- VPC networking resources
+- EC2 Instance
+- Security Group
+
+**Concepts Learned**
+- Root and child modules
+- Module inputs and outputs
+- Local module sources
+- Infrastructure abstraction
+- Reusable Terraform configurations
+
+**Completed Tasks**
+- Created a reusable EC2 module
+- Passed VPC, subnet, instance, and key-pair values into the module
+- Provisioned an EC2 instance and security group through the child module
+- Configured Apache using User Data
+- Returned the instance ID, public IP, website URL, and security group ID to the root project
+- Successfully deployed and tested the module
+
+**Why This Matters**
+
+Terraform modules allow teams to write infrastructure logic once and reuse it across multiple projects and environments. They reduce duplicated code, improve consistency, and make infrastructure easier to maintain and standardize.
+
 ## Skills Practiced
 
 ### AWS
