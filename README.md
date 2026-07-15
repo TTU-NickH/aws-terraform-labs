@@ -211,6 +211,38 @@ Terraform relies on its state file to understand the infrastructure it manages. 
 
 Terraform modules allow teams to write infrastructure logic once and reuse it across multiple projects and environments. They reduce duplicated code, improve consistency, and make infrastructure easier to maintain and standardize.
 
+### Lab 10 - Deploy Multiple EC2 Instances
+
+**Objective:** Use Terraform modules and the `for_each` meta-argument to provision multiple EC2 web servers from a single reusable module.
+
+**AWS Resources**
+- VPC
+- Public Subnet
+- Internet Gateway
+- Route Table
+- 3 EC2 Instances
+- 3 Security Groups
+
+**Concepts Learned**
+- `for_each`
+- Terraform Maps
+- Module Reuse
+- Dynamic Infrastructure
+- Infrastructure Scaling
+- Module Outputs
+
+**Completed Tasks**
+- Created a map of EC2 server configurations
+- Used `for_each` to deploy multiple EC2 instances from a single module
+- Provisioned independent security groups for each server
+- Installed Apache on each instance using User Data
+- Returned public IP addresses and website URLs through module outputs
+- Successfully deployed and verified all web servers
+
+**Why This Matters**
+
+Terraform's `for_each` meta-argument allows engineers to scale infrastructure without duplicating code. Combined with reusable modules, it enables teams to provision and manage multiple resources from a single, maintainable configuration. This is a common pattern used in production cloud environments to efficiently manage large numbers of servers.
+
 ## Skills Practiced
 
 ### AWS
@@ -243,6 +275,12 @@ Terraform modules allow teams to write infrastructure logic once and reuse it ac
 - S3 Backends
 - State Management
 - Infrastructure Collaboration
+- Modules
+- Module Reuse
+- for_each
+- Maps 
+- Dynamic Resource Creation
+- Infrastructure Scaling
 
 ### Linux
 - SSH
