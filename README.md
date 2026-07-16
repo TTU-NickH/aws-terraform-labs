@@ -243,6 +243,43 @@ Terraform modules allow teams to write infrastructure logic once and reuse it ac
 
 Terraform's `for_each` meta-argument allows engineers to scale infrastructure without duplicating code. Combined with reusable modules, it enables teams to provision and manage multiple resources from a single, maintainable configuration. This is a common pattern used in production cloud environments to efficiently manage large numbers of servers.
 
+### Lab 11 - Application Load Balancer
+
+**Objective:** Deploy an Application Load Balancer (ALB) to distribute traffic across multiple EC2 web servers provisioned with Terraform modules.
+
+**AWS Resources**
+- VPC
+- 2 Public Subnets
+- Internet Gateway
+- Route Table
+- 3 EC2 Instances
+- 3 Security Groups
+- Application Load Balancer
+- Target Group
+- Target Group Attachments
+- HTTP Listener
+
+**Concepts Learned**
+- Application Load Balancers
+- Target Groups
+- HTTP Listeners
+- Health Checks
+- Security Group Referencing
+- Multi-AZ Architecture
+- Load Balancing
+
+**Completed Tasks**
+- Created an internet-facing Application Load Balancer
+- Deployed EC2 instances across multiple Availability Zones
+- Registered EC2 instances with a Target Group
+- Configured HTTP health checks
+- Restricted EC2 HTTP access to only the ALB security group
+- Successfully routed traffic through the load balancer
+
+**Why This Matters**
+
+Application Load Balancers improve application availability by distributing requests across multiple healthy servers. This architecture is commonly used in production AWS environments to increase fault tolerance, scalability, and reliability while simplifying access through a single endpoint.
+
 ## Skills Practiced
 
 ### AWS
@@ -254,6 +291,11 @@ Terraform's `for_each` meta-argument allows engineers to scale infrastructure wi
 - Amazon S3 Versioning
 - S3 Encryption
 - Remote Backend Configuration
+- Application Load Balancer
+- Target Groups
+- HTTP Listeners
+- Health Checks
+- Multi-Availabiliity Zone Networking
 
 ### Terraform
 - Input Variables
@@ -281,6 +323,9 @@ Terraform's `for_each` meta-argument allows engineers to scale infrastructure wi
 - Maps 
 - Dynamic Resource Creation
 - Infrastructure Scaling
+- Load Balancer Resources
+- Target Group Attachments
+- Security Group Referencing
 
 ### Linux
 - SSH
