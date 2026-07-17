@@ -280,6 +280,41 @@ Terraform's `for_each` meta-argument allows engineers to scale infrastructure wi
 
 Application Load Balancers improve application availability by distributing requests across multiple healthy servers. This architecture is commonly used in production AWS environments to increase fault tolerance, scalability, and reliability while simplifying access through a single endpoint.
 
+## Lab 12 – Auto Scaling Groups
+
+### Objective
+Deploy a highly available web application using Launch Templates, Auto Scaling Groups, and an Application Load Balancer. Configure automatic instance replacement, health checks, and traffic distribution across multiple Availability Zones.
+
+### Skills Learned
+- Launch Templates
+- Auto Scaling Groups (ASG)
+- Application Load Balancers (ALB)
+- Target Groups
+- Health Checks
+- High Availability
+- AWS Systems Manager (SSM) Parameter Store
+- Cloud-init troubleshooting
+- Infrastructure debugging
+
+### Key Concepts
+- Launch Templates provide reusable configurations for EC2 instances.
+- Auto Scaling Groups automatically maintain the desired number of healthy instances.
+- Target Groups monitor instance health and only route traffic to healthy targets.
+- Application Load Balancers distribute traffic across multiple Availability Zones for improved availability.
+- Instance Refresh allows existing instances to be replaced after Launch Template updates.
+
+### Troubleshooting
+- Diagnosed repeated **502 Bad Gateway** errors from the Application Load Balancer.
+- Used `aws elbv2 describe-target-health` and `aws autoscaling describe-auto-scaling-groups` to investigate unhealthy targets.
+- SSH'd into EC2 instances and reviewed `cloud-init-output.log` to identify User Data failures.
+- Discovered the Launch Template was using an ECS-optimized Amazon Linux AMI due to an overly broad Terraform AMI filter.
+- Updated the Launch Template to use the AWS Systems Manager Parameter Store for the latest standard Amazon Linux 2023 AMI.
+- Performed an Auto Scaling Instance Refresh to replace existing instances with the corrected Launch Template.
+- Verified healthy targets and successful traffic routing through the Application Load Balancer.
+
+### Outcome
+Successfully deployed a fault-tolerant, highly available web application capable of automatically replacing unhealthy EC2 instances while distributing traffic through an Application Load Balancer.
+
 ## Skills Practiced
 
 ### AWS
