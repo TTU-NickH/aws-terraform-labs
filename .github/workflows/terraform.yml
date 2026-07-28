@@ -46,4 +46,9 @@ jobs:
             aws-region: us-east-2
         
       - name: Terraform plan
+        env:
+            TF_VAR_aws_region: us-east-2
+            TF_VAR_key_name: Nick-key
+            TF_VAR_instance_type: t2.micro
+            TF_VAR_db_password: ${{ secrets.TF_VAR_DB_PASSWORD }}
         run: terraform plan -input=false
