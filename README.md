@@ -315,6 +315,63 @@ Deploy a highly available web application using Launch Templates, Auto Scaling G
 ### Outcome
 Successfully deployed a fault-tolerant, highly available web application capable of automatically replacing unhealthy EC2 instances while distributing traffic through an Application Load Balancer.
 
+## Lab 13 – High Availability Web Application
+
+Built a production-style AWS infrastructure using Terraform that deploys a highly available web application behind an Application Load Balancer with an Auto Scaling Group and a private Amazon RDS MySQL database.
+
+**Technologies**
+- Terraform
+- AWS EC2
+- Application Load Balancer
+- Auto Scaling Groups
+- Amazon RDS (MySQL)
+- VPC
+- Public & Private Subnets
+- Security Groups
+
+**Key Skills**
+- Infrastructure as Code (IaC)
+- High Availability Architecture
+- AWS Networking
+- Launch Templates
+- Auto Scaling
+- Load Balancing
+- Private Database Deployment
+- Security Group Configuration
+
+**What I Learned**
+- Designed a multi-tier AWS architecture
+- Connected EC2 instances to a private RDS database
+- Configured secure networking with public and private subnets
+- Used Launch Templates and Auto Scaling Groups
+- Validated end-to-end connectivity and successfully deployed infrastructure with Terraform
+
+## Lab 14 – Terraform CI/CD with GitHub Actions
+
+Implemented a GitHub Actions CI pipeline to automatically validate Terraform code on every push and pull request. The workflow checks formatting, initializes Terraform, validates the configuration, authenticates to AWS using GitHub Secrets, and generates a Terraform execution plan.
+
+**Technologies**
+- Terraform
+- GitHub Actions
+- GitHub Secrets
+- AWS
+- YAML
+
+**Key Skills**
+- Continuous Integration (CI)
+- Infrastructure as Code (IaC)
+- GitHub Actions
+- Terraform Validation
+- Terraform Planning
+- Secret Management
+
+**What I Learned**
+- Built an automated Terraform CI pipeline
+- Configured GitHub Secrets for AWS authentication
+- Passed Terraform variables using `TF_VAR_*`
+- Debugged GitHub Actions workflow errors
+- Automated infrastructure validation without deploying resources
+
 ## Skills Practiced
 
 ### AWS
